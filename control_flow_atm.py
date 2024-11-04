@@ -37,27 +37,30 @@ while True:
     if choice == '1':
        print(f"Your current balance is ${balance}: ")   #Check Balance
     elif choice == '2':
-        deposit = float(input("Enter amount you want to deposit: $"))
+        deposit = int(input("Enter amount you want to deposit: $"))
         if deposit > 0:
             balance += deposit
             print(f"deposit of ${deposit}")      #Deposit Funds
         print(f"Your current balance is ${balance}")
     elif choice == '3':
-        withdrawal = float (input("How much do you wish to withdraw: "))    
+        withdrawal = int(input("How much do you wish to withdraw: "))
         if withdrawal > 0:
-            balance >= withdrawal
-            print("You have insufficient funds cannot complete this tansaction ")   #Withdraw Funds
-
-        elif withdrawal > 0:
-         balance -= withdrawal
-         print (float(f"Your new balance is ${balance}"))
+            balance -= withdrawal
+            print(f"Your new balance is ${balance} ")   #Withdraw Funds
+    elif withdrawal > 0:
+         withdrawal <= balance
+         print (int(f"You have insufficient funds "))
     elif choice == '4':
-        current_pin = input(f'Enter your current PIN: ')
+        current_pin = int(input(f'Enter your current PIN: '))
         if user_pin == current_pin:
          new_pin = input(f'Set your new PIN: ')
          confirm = input(f'Enter your new PIN again to confirm: ')    #Change PIN
+
         if new_pin == confirm:
           print("Your PIN has been changed successfully. ")
     if choice == '5':
+        print(f"Thank you for trusting our Bank")
+        print(int(f"Your total deposit: ${deposit}"))
+        print(int(f"Your total withdrwal was: ${withdrawal}"))
         break         
          
