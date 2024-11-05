@@ -45,7 +45,7 @@ while True:
         print(f"Your current balance is ${balance}")
     elif choice == '3':
         withdrawal = int(input("How much do you wish to withdraw: "))
-        if withdrawal > 0:
+        if 0 < withdrawal <= balance:
             balance -= withdrawal
             print(f"Your new balance is ${balance} ")   #Withdraw Funds
         else:
