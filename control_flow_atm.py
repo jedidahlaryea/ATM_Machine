@@ -16,6 +16,7 @@ def confirm_pin():
             print(f"You have entered an incorrect PIN.{attempts} attempts left.")
 
     print("Too many incorrect attempts. Access blocked.")
+     
          
 if __name__ == "__main__":
     confirm_pin()
@@ -47,20 +48,20 @@ while True:
         if withdrawal > 0:
             balance -= withdrawal
             print(f"Your new balance is ${balance} ")   #Withdraw Funds
-    elif withdrawal > 0:
-         withdrawal <= balance
-         print (int(f"You have insufficient funds "))
+        else:
+         print(f"You have insufficient funds ")
     elif choice == '4':
-        current_pin = int(input(f'Enter your current PIN: '))
+        current_pin = input(f'Enter your current PIN: ')
         if user_pin == current_pin:
-         new_pin = input(f'Set your new PIN: ')
-         confirm = input(f'Enter your new PIN again to confirm: ')    #Change PIN
+         new_pin = int(input(f'Set your new PIN: '))
+         confirm = int(input(f'Enter your new PIN again to confirm: '))    #Change PIN
 
         if new_pin == confirm:
-          print("Your PIN has been changed successfully. ")
+           user_pin == new_pin
+           print("Your PIN has been changed successfully. ")
+        else:
+            print("PIN confirmation does not match ")   
     if choice == '5':
         print(f"Thank you for trusting our Bank")
-        print(int(f"Your total deposit: ${deposit}"))
-        print(int(f"Your total withdrwal was: ${withdrawal}"))
         break         
          

@@ -26,7 +26,5 @@ This repository contains an interactive command-line project:
 *  Language used: Python
 
 
-## Objectives 
-* Strengthen control flow through nested conditions.
-* Practice variable manipulation, loops and functions
-* Implement enhanced user security and transaction tracking
+## Contributions
+* You are welcomed to make or contribute to our project
