@@ -14,12 +14,10 @@ def confirm_pin():
         else:
             attempts -= 1
             print(f"You have entered an incorrect PIN.{attempts} attempts left.")
+    else:
+     print("Too many incorrect attempts. Access blocked.")
 
-    print("Too many incorrect attempts. Access blocked.")
-     
-         
-if __name__ == "__main__":
-    confirm_pin()
+confirm_pin()
 
 #Main Menu
 def display_menu():
